@@ -30,7 +30,7 @@ const InfoImage = styled.img`
 `
 
 const InfoTitle = styled.h1`
-  margin: 0;
+  margin: 0 0 3rem;
   font-weight: var(--fw-normal);
 `
 
@@ -90,6 +90,17 @@ const Tag = styled.span`
   cursor: pointer;
 `
 
+const KeyCounter = {
+  count: 0,
+  getNextKey() {
+    this.count += 1
+    return this.count
+  },
+  reset() {
+    this.count = 0
+  }
+}
+
 const Info = props => {
   const {
     name,
@@ -126,7 +137,9 @@ const Info = props => {
             <ListItem>
               <b>Native Name(s):</b>{' '}
               {Object.values(name.nativeName).map(n => (
-                <span key={n.common}>{n.common} </span>
+                <span key={`${n.common}:${KeyCounter.getNextKey()}`}>
+                  {n.common}{' '}
+                </span>
               ))}
             </ListItem>
             <ListItem>

@@ -1,0 +1,25 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (optional, can be removed or styled) -->
+  <rect width="200" height="200" fill="#f0f0f0"/>
+
+  <!-- Globe -->
+  <circle cx="100" cy="100" r="80" fill="#e6f0fa" stroke="#ccc" stroke-width="2"/>
+  <!-- Globe grid lines (simplified) -->
+  <path d="M20 100 A80 80 0 0 1 180 100 M100 20 A80 80 0 0 1 100 180" fill="none" stroke="#ddd" stroke-width="1"/>
+  <!-- Continents (simplified shapes) -->
+  <path d="M70 80 Q80 70 90 80 Q100 60 110 80 Q120 70 130 80 Q140 90 130 100 Q140 110 130 120 Q120 130 110 120 Q100 140 90 120 Q80 130 70 120 Q60 110 70 100 Z" fill="#d3d3d3"/>
+  <path d="M140 90 Q150 80 160 90 Q170 100 160 110 Q150 120 140 110 Z" fill="#d3d3d3"/>
+
+  <!-- Magnifying Glass -->
+  <g transform="translate(120, 80) rotate(30)">
+    <!-- Lens -->
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#333" stroke-width="4"/>
+    <!-- Handle -->
+    <rect x="-5" y="30" width="10" height="40" fill="#8b4513" rx="2"/>
+    <!-- Magnified area (optional effect) -->
+    <path d="M-20 -20 Q0 -10 20 -20 Q10 0 20 20 Q0 10 -20 20 Q-10 0 -20 -20 Z" fill="#fff" opacity="0.3"/>
+  </g>
+
+  <!-- Optional shadow effect -->
+  <ellipse cx="100" cy="120" rx="90" ry="20" fill="#000" opacity="0.1"/>
+</svg>

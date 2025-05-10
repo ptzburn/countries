@@ -20,8 +20,10 @@ const HomePage = ({ countries, setCountries }) => {
     }
 
     if (search) {
-      data = data.filter(c =>
-        c.name.common.toLowerCase().includes(search.toLowerCase())
+      data = data.filter(
+        c =>
+          c.name.common.toLowerCase().includes(search.toLowerCase()) ||
+          c.name.official.toLowerCase().includes(search.toLowerCase())
       )
     }
 
@@ -65,8 +67,8 @@ const HomePage = ({ countries, setCountries }) => {
 
           return (
             <Card
-              key={c.name.common}
-              onClick={() => navigate(`/country/${c.name.common}`)}
+              key={`${c.name.common}(${c.name.official})`}
+              onClick={() => navigate(`/country/${c.name.official}`)}
               {...countryInfo}
             />
           )

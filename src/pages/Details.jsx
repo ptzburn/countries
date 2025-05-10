@@ -11,8 +11,6 @@ const Details = () => {
   const navigate = useNavigate()
   const [country, setCountry] = useState(null)
 
-  console.log(country)
-
   useEffect(() => {
     axios.get(searchByCountry(name)).then(({ data }) => setCountry(data[0]))
   }, [name])

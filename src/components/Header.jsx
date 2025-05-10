@@ -44,7 +44,7 @@ const Header = () => {
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title>Where in the world?</Title>
+          <Title>Where in the World?</Title>
           <ModeSwitcher onClick={toggleTheme}>
             {theme === 'light' ? (
               <IoMoonOutline size="14px" />
