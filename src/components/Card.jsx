@@ -11,8 +11,8 @@ const Wrapper = styled.article`
 const CardImage = styled.img`
   display: block;
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 200px;
+  object-fit: fit;
   object-position: center;
   box-shadow: var(--shadow);
 `
